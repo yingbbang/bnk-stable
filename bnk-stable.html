@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신동백전!</title>
+  <style>
+    /* 기본 스타일 초기화 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* 동영상 배경 */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* 오버레이 */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5); /* 어둡게 처리 */
+      z-index: 0;
+    }
+
+    /* 컨텐츠 중앙 정렬 */
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: #fff;
+      background: #ff4d4f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #ff7875;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+      .content p {
+        font-size: 1rem;
+      }
+      .btn {
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 동영상 배경 -->
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="./images/dongbaekjeon.mp4" type="video/mp4">
+    브라우저가 동영상을 지원하지 않습니다.
+  </video>
+
+  <!-- 어두운 오버레이 -->
+  <div class="overlay"></div>
+
+  <!-- 랜딩 페이지 컨텐츠 -->
+  <div class="content">
+    <h1>부산 지역화폐
+        동백전이<br>
+        새롭게 바뀝니다!</h1>
+    <p> 스테이블코인으로 전환된 신동백전!<br>
+        신동백전과 함께 실시간 융복합 게임과 투명한 거래, <br>
+        한 차원 높은 재미를 경험하세요.</p>
+    <a href="https://mobile.busan.com/view/busan/view.php?code=2025062618124192272" class="btn">지금 시작하기</a>
+  </div>
+
+  부기키우기 | 룰렛게임 | 씨앗호떡 피하기 | 3 blcok | 
+
+
+</body>
+</html>
