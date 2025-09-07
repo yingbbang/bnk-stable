@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>신동백전!</title>
   <script>
-  // 화면 너비가 768px보다 크면 (즉, PC 브라우저)
-  if (window.innerWidth > 768) {
+  /*
+  //PC(데스크톱)**일 때만 .video-bg 동영상을 top: 500px로 위치 이동
+  //모바일(예: 가로 폭 768px 이하)**일 때는 그대로 top: 0
+  */
+  
+  if (window.innerWidth > 768) { // 화면 너비가 768px보다 크면 (즉, PC 브라우저)
     const video = document.querySelector('.video-bg');
     video.style.top = '500px';
   }
   </script>
 
   <style>
-    /*
-    //PC(데스크톱)**일 때만 .video-bg 동영상을 top: 500px로 위치 이동
-    //모바일(예: 가로 폭 768px 이하)**일 때는 그대로 top: 0
-    */
+
     
     /* 기본 스타일 초기화 */
     * {
@@ -111,11 +112,14 @@
 </head>
 <body>
 
-  <!-- 동영상 배경 -->
+<!-- 동영상 배경을 감싸는 래퍼 추가 -->
+<div class="video-wrapper">
   <video class="video-bg" autoplay muted loop playsinline>
     <source src="./images/dongbaek.mp4" type="video/mp4">
     브라우저가 동영상을 지원하지 않습니다.
   </video>
+</div>
+
 
   <!-- 어두운 오버레이 -->
   <div class="overlay"></div>
