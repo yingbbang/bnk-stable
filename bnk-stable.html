@@ -4,7 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>신동백전!</title>
+  <script>
+  // 화면 너비가 768px보다 크면 (즉, PC 브라우저)
+  if (window.innerWidth > 768) {
+    const video = document.querySelector('.video-bg');
+    video.style.top = '500px';
+  }
+  </script>
+
   <style>
+    /*
+    //PC(데스크톱)**일 때만 .video-bg 동영상을 top: 500px로 위치 이동
+    //모바일(예: 가로 폭 768px 이하)**일 때는 그대로 top: 0
+    */
+    
     /* 기본 스타일 초기화 */
     * {
       margin: 0;
@@ -27,7 +40,9 @@
       object-fit: cover;
       object-position: top center;
       z-index: -1;
+      transition: top 0.3s ease;
     }
+
 
     /* 오버레이 */
     .overlay {
